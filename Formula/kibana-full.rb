@@ -48,10 +48,7 @@ class KibanaFull < Formula
   end
 
   service do
-    run [opt_bin/"kibana"]
-    working_dir var
-    log_path var/"log/kibana.log"
-    error_log_path var/"log/kibana.log"
+    run opt_bin/"kibana"
   end
 
   test do

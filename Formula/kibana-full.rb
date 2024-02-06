@@ -1,9 +1,11 @@
 class KibanaFull < Formula
-  desc "Analytics and search dashboard for Elasticsearch"
-  homepage "https://www.elastic.co/products/kibana"
-  url "https://artifacts.elastic.co/downloads/kibana/kibana-7.17.4-darwin-x86_64.tar.gz?tap=elastic/homebrew-tap"
+  arch = Hardware::CPU.intel? ? "x86_64" : "aarch64"
   version "7.17.4"
-  sha256 "ac2b5a639ad83431db25e4161f811111d45db052eb845091e18f847016a34a55"
+  url "https://artifacts.elastic.co/downloads/kibana/kibana-#{version}-darwin-#{arch}.tar.gz?tap=elastic/homebrew-tap"
+  revision 1
+
+  homepage "https://www.elastic.co/products/kibana"
+  desc "Analytics and search dashboard for Elasticsearch"
   conflicts_with "kibana"
 
   def install
@@ -49,6 +51,7 @@ class KibanaFull < Formula
 
   service do
     run opt_bin/"kibana"
+    working_dir var
   end
 
   test do

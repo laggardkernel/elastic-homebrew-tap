@@ -1,8 +1,8 @@
 class KibanaFull < Formula
   arch = Hardware::CPU.intel? ? "x86_64" : "aarch64"
-  version "7.17.4"
+  version "7.17.17"
   url "https://artifacts.elastic.co/downloads/kibana/kibana-#{version}-darwin-#{arch}.tar.gz?tap=elastic/homebrew-tap"
-  revision 1
+  revision 0
 
   homepage "https://www.elastic.co/products/kibana"
   desc "Analytics and search dashboard for Elasticsearch"

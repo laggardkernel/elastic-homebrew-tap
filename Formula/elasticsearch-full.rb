@@ -1,6 +1,6 @@
 class ElasticsearchFull < Formula
   arch = Hardware::CPU.intel? ? "x86_64" : "aarch64"
-  version "7.17.17"
+  version "7.17.18"
   url "https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-#{version}-darwin-#{arch}.tar.gz?tap=elastic/homebrew-tap"
   revision 0
 

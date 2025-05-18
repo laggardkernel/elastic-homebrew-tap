@@ -1,6 +1,6 @@
 class KibanaFull < Formula
   arch = Hardware::CPU.intel? ? "x86_64" : "aarch64"
-  version "7.17.18"
+  version "7.17.28"
   url "https://artifacts.elastic.co/downloads/kibana/kibana-#{version}-darwin-#{arch}.tar.gz?tap=elastic/homebrew-tap"
   revision 0
 
